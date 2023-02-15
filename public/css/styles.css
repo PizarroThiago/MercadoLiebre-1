@@ -10,9 +10,17 @@ body{
 }
 
 h3{
-    font-size: 24px;
+    font-size: 20px;
 }
-
+.main-article .description{
+    display: none;
+}
+article:hover .description{
+    display: block;
+}
+article:hover{
+    box-shadow: 0px 0px 10px rgb(48, 48, 48);
+}
 p{
     font-size: 12px;
 }
@@ -115,11 +123,13 @@ div.offers{
 h3,
 .description{
     color: #666;
+    
 }
 
 .description{
-    display: none;
+    
     margin-top: 20px;
+
 }
 
 section.banner img{
@@ -158,7 +168,92 @@ main section article i{
     right: 20px;
     top: -15px;
 }
+main section article i:hover{
+    animation-name: carrito;
+    animation-duration: 3s;
+}
+div.top-header {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 1%;
+    align-items: center;
+    justify-content: space-around;
+}
 
+header div.top-header p {
+    text-align: center;
+    margin-top: 10px;
+}
+
+header {
+    background-color: #EAC926;
+}
+
+header div.logo {
+    width: 50%;
+    padding: 10px;
+}
+
+header form {
+    display: flex;
+    align-items: center;
+    padding: 2px;
+    font-size: 11px;
+}
+
+header nav {
+    display: flex;
+    font-size: 12px;
+    margin-left: 20px;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+header form input {
+    display: flex;
+    background-color: #FFF;
+    outline: none;
+    color: #666;
+    font-size: 1.3em;
+    border-radius: 10px 0 0 10px;
+    width: 100%;
+    border: none;
+}
+
+header form button {
+    background-color: #FFF;
+    color: #666;
+    width: 10%;
+    border: none;
+    padding: 15px 0;
+    text-align: center;
+    border-radius: 0 10px 10px 0;
+    font-size: 1.3em;
+    cursor: pointer;
+}
+
+div.burger-menu {
+    text-align: center;
+}
+
+div.burger-menu i {
+    background-color: #0044AA;
+    border-radius: 5px;
+    color: #FFF;
+    font-size: 20px;
+    height: 40px;
+    margin: 10px 0px 20px 0px;
+    padding: 10px;
+    width: 40px;
+}
+@keyframes carrito{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(-90deg);
+    }
+}
 main section h3{
     margin: 20px 0px;
 }
@@ -177,7 +272,44 @@ footer article{
     flex-direction: column;
     align-items: center;
 }
+.arriba p{
+    text-align: center;
+}
+.Copyright{
+    font-size: 10px;
+    text-align: start;
+}
+.arriba article .fa-solid{
+    color: #0044aa ;
+}
+.arriba article:hover{
+    box-shadow: none;
+}
+.arriba article:hover .fa-solid{
+    color: #eac926 ;
+}
 @media (min-width: 361px){
+    header div.top-header {
+        padding: 5%;
+    }
+
+    header div.top-header div.logo {
+        width: 50%;
+    }
+
+    header form {
+        width: 50%;
+        align-items: stretch;
+    }
+
+    header form input {
+        padding: 6%;
+    }
+
+    header nav {
+        display: none;
+    }
+
     main section article .description{
         display: block;
     }
@@ -206,7 +338,57 @@ footer article{
 
 
 @media (min-width: 769px){
+    header div.top-header {
+        padding: 0;
+    }
+
+    header div.top-header div.logo {
+        width: 20vw;
+    }
+
+    header div.burger-menu {
+        display: none;
+    }
+
+    header nav {
+        display: flex;
+    }
+
+    header nav ul {
+        display: flex;
+        align-items: center;
+    }
+
+    header nav ul li {
+        padding: 4% 0;
+        margin: 0 20px;
+        list-style-type: none;
+    }
+
+    header nav ul li a {
+        text-decoration: none;
+        color: #000;
+    }
+
+    header form {
+        display: flex;
+        padding: 2px;
+        font-size: 11px;
+        width: 50%;
+        align-items: stretch;
+    }
+
+    header form input {
+        padding: 2%;
+    }
+
     main section div.products article{
         width: 22%;
     }
+    footer .arriba{
+        display: flex;
+        flex-direction: row;
+    }
 }
+
+
